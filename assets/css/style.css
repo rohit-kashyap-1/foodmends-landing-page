@@ -182,7 +182,7 @@ header{
 }
 
 .text-primary{
-    color: skyblue !important;
+    color: var(--color3) !important;
 }
 .hover-primary:hover{
     color: var(--color3);
@@ -243,6 +243,7 @@ header{
     list-style: none;
     padding-left: 0;
     margin-top: 30px;
+    columns:2;
 }
 .cuslist li{
     display: flex;
@@ -281,9 +282,10 @@ border-bottom-left-radius: 50%;
     margin-top: 60px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap:30px;
 }
 .service-grid .item{
-    border-right: 1px dashed #ccc;
+    border: 1px dashed #ccc;
     padding: 30px 20px;
     transition: 300ms;
     cursor: pointer;
@@ -370,4 +372,92 @@ footer input::placeholder{
 }
 .footer-logo{
     filter: brightness(8);
+}
+@media screen and (max-width:768px){
+    nav.container{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+    }
+    .navbar-custom{
+            grid-column: 1 / span 2;
+    }
+    nav.container > div:last-child{
+        grid-column-start: 2;
+    grid-row-start: 1;
+    text-align:right;
+    }
+    .top-rated-row{
+        grid-template-columns: 1fr;
+    }
+    .hero-inner{
+            gap: 0;
+    flex-direction: column;
+    }
+    .service-grid{
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+    }
+    .service-grid .item:last-child,.dtssdd{
+        grid-column:1 /span 2 !important
+    }
+    .video-hom{
+        min-height:400px;
+    }
+    .practice{
+        gap: 18px;
+    flex-direction: column;
+    }
+    footer{
+           padding: 34px 0; 
+    }
+    body{
+        overflow-x:hidden;
+    }
+    .nav-item > a{
+        padding:15px;
+    }
+    .heading-section{
+        grid-template-columns:1fr
+    }
+    .heading-section .img{
+            min-height: 400px;
+    background-image: url(../images/home-4.jpg);
+    background-size: cover;
+    }
+    .heading-section .content{
+            padding: 22px;
+    }
+    .suffer,.scsauadd{
+        padding-top:0;
+    }
+    .cuslist{
+        margin-top:12px;
+    }
+    .cuslist li{
+        font-size:16px;
+    }
+    .cuslist li img{
+        width:16px;
+    }
+    .suffer-img{
+        margin-top:30px;
+    }
+    .cause{
+        padding:50px;
+    }
+    .hero{
+            margin-bottom: 0;
+            padding-top:20px;
+    padding-bottom: 0;
+    }
+    #why{
+        padding-top:10px;
+    }
+    html{
+        overflow-x:hidden;
+    }
+    .top-rated-item{
+            padding: 22px 20px;
+    }
+    
 }
